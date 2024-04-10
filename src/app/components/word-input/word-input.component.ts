@@ -8,17 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './word-input.component.css'
 })
 export class WordInputComponent {
-  // @Output() word = new EventEmitter<>()
-  // @Output() word = new EventEmitter<>()
+  @Output() buttonSubmit = new EventEmitter<string>();
   currentWord: string = '';
 
   onInput(event: Event) {
-    
-
-
-  }
+      this.currentWord = (event.target as HTMLInputElement).value;
+}
 
   onSubmit(){
-    this.currentWord
+    this.buttonSubmit.emit(this.currentWord);
   }
 }

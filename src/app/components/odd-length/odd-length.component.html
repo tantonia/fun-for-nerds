@@ -1,0 +1,11 @@
+    <!-- @if (oddLengthWordsInput) {
+        <span class="text-danger">{{ oddLengthWordsInput }}</span> <br />
+    } -->
+    @if (!oddLengthWordsInput || oddLengthWordsInput.length === 0) {
+        <span> No odd length words </span>
+    } @else{
+        @for (word of oddLengthWordsData; track word) {
+            <span>{{ word }}</span><br />
+        }
+    }
+

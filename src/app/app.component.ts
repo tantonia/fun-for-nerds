@@ -1,30 +1,26 @@
 import { Component } from '@angular/core';
 import { WordInputComponent } from "./components/word-input/word-input.component";
-// import { RouterOutlet } from '@angular/router';
+import { OddLengthComponent } from './components/odd-length/odd-length.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [WordInputComponent]
+    imports: [WordInputComponent, OddLengthComponent]
 })
 export class AppComponent {
   title = 'fun-for-nerds';
-  partialOddWord: string;
-  partialEvenWord: string;
-  oddLengthWords: string;
-  evenLengthWords: string;
+  oddLengthWords: string = '';
+  evenLengthWords: string = '';
 
-  onWord(word: string) {
-
-  }
-
-  onPartialWord(word: string) {
+ 
+  onSubmit(word: string) {
     if (word.length % 2 === 0) {
-      return this.evenLengthWords;
+      this.evenLengthWords = word;
     } else {
-      return this.oddLengthWords;
-    }
-  }
+      this.oddLengthWords = word;
+    } return word;
+  } 
 }

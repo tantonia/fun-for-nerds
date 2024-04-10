@@ -1,4 +1,13 @@
 <div class="d-flex gap-2">
-    <input class="form-control" />
-    <button (click)="onSubmit()" class="btn btn-primary ">Submit</button>
+    <input class="form-control" (input)="onInput($event)" />
+    <button id="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
 </div>
+<div class="container-fluid d-flex  w-100 ">
+    @if(!currentWord ) {
+    <span></span>
+    } @else if (currentWord.length % 2 === 0) {
+    <span class="text-start text-danger w-100 ">{{ currentWord }}</span>
+    } @else if (currentWord.length % 2 !== 0) {                                                         
+    <span  class="text-end text-danger flex-self-end w-100 ">{{ currentWord }}</span>
+    }
+ </div>

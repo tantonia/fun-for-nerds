@@ -1,11 +1,11 @@
 <div class="container mt-5">
   <div class="d-flex flex-column gap-2 ">
     <div class="alert alert-primary text-center fw-bold">Fun For Nerds</div>
-    <app-word-input></app-word-input>
+    <app-word-input (buttonSubmit)="onSubmit($event)"></app-word-input>
 
     <div class="d-flex justify-content-between gap-2">
-      <!-- <app-odd-length></app-odd-length> -->
-      <!-- <app-even-length></app-even-length> -->
+      <app-odd-length [oddLengthWordsInput]="oddLengthWords"></app-odd-length>
+      <!-- <app-even-length [oddLengthWords]="oddLengthWords"></app-even-length> -->
 
     </div>
   </div>  
