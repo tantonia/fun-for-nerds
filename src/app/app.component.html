@@ -4,8 +4,8 @@
     <app-word-input (buttonSubmit)="onSubmit($event)"></app-word-input>
 
     <div class="d-flex justify-content-between gap-2">
+      <app-even-length [evenLengthWordsInput]="evenLengthWords"></app-even-length>
       <app-odd-length [oddLengthWordsInput]="oddLengthWords"></app-odd-length>
-      <!-- <app-even-length [oddLengthWords]="oddLengthWords"></app-even-length> -->
 
     </div>
   </div>  

@@ -1,11 +1,9 @@
-    <!-- @if (oddLengthWordsInput) {
-        <span class="text-danger">{{ oddLengthWordsInput }}</span> <br />
-    } -->
+<div>
     @if (!oddLengthWordsInput || oddLengthWordsInput.length === 0) {
-        <span> No odd length words </span>
-    } @else{
-        @for (word of oddLengthWordsData; track word) {
-            <span>{{ word }}</span><br />
+        <span>No odd length words</span>
+     } @else  {
+        @for (item of oddLengthWordsData; track item) {
+           <span >{{item}}</span><br>
         }
-    }
-
+     }
+</div>

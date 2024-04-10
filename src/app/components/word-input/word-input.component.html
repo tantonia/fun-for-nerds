@@ -1,6 +1,6 @@
 <div class="d-flex gap-2">
-    <input class="form-control" (input)="onInput($event)" />
-    <button id="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+    <input class="form-control flex-fill me-2 border rounded" type="text" (input)="onInput($event)" />
+    <button id="submit" class="btn btn-primary" type="button" (click)="onSubmit">Submit</button>
 </div>
 <div class="container-fluid d-flex  w-100 ">
     @if(!currentWord ) {
@@ -8,6 +8,6 @@
     } @else if (currentWord.length % 2 === 0) {
     <span class="text-start text-danger w-100 ">{{ currentWord }}</span>
     } @else if (currentWord.length % 2 !== 0) {                                                         
-    <span  class="text-end text-danger flex-self-end w-100 ">{{ currentWord }}</span>
+    <span class="text-end text-danger flex-self-end w-100 ">{{ currentWord }}</span>
     }
  </div>

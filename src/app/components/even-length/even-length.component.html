@@ -1,0 +1,9 @@
+<div>
+    @if (!evenLengthWordsInput || evenLengthWordsInput.length === 0) {
+        <span>No even length words</span>
+     } @else  {
+        @for (item of evenLengthWordsData; track item) {
+           <span >{{item}}</span><br>
+        }
+     }
+</div>

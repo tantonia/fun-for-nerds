@@ -12,10 +12,10 @@ export class WordInputComponent {
   currentWord: string = '';
 
   onInput(event: Event) {
-      this.currentWord = (event.target as HTMLInputElement).value;
-}
+      this.currentWord = (<HTMLInputElement>event.target).value;
+  }
 
-  onSubmit(){
+  onSubmit() {
     this.buttonSubmit.emit(this.currentWord);
   }
 }
